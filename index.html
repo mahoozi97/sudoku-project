@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 id="title">Sudoku</h1>
+    <div class="button-container">
+      <button id="1b">1</button>
+      <button id="2b">2</button>
+      <button id="3b">3</button>
+      <button id="4b">4</button>
+      <button id="5b">5</button>
+      <button id="6b">6</button>
+      <button id="7b">7</button>
+      <button id="8b">8</button>
+      <button id="9b">9</button>
+    </div>
+
+    <div class="puzzle-status">
+      <h3 class="mistakes"></h3>
+      <h3 class="message"></h3>
+      <button class="restart hidden">Restart</button>
+    </div>
+
+    <div class="sudoku">
+      <div class="row">
+        <div id="0" class="cell">8</div>
+        <div id="1" class="cell js-cell"></div>
+        <div id="2" class="cell">1</div>
+        <div id="3" class="cell">5</div>
+        <div id="4" class="cell js-cell"></div>
+        <div id="5" class="cell">3</div>
+        <div id="6" class="cell">9</div>
+        <div id="7" class="cell js-cell"></div>
+        <div id="8" class="cell">6</div>
+      </div>
+
+      <div class="row">
+        <div id="9" class="cell js-cell"></div>
+        <div id="10" class="cell js-cell"></div>
+        <div id="11" class="cell">9</div>
+        <div id="12" class="cell js-cell"></div>
+        <div id="13" class="cell js-cell"></div>
+        <div id="14" class="cell">7</div>
+        <div id="15" class="cell">8</div>
+        <div id="16" class="cell">5</div>
+        <div id="17" class="cell js-cell"></div>
+      </div>
+
+      <div class="row">
+        <div id="18" class="cell">2</div>
+        <div id="19" class="cell">5</div>
+        <div id="20" class="cell js-cell"></div>
+        <div id="21" class="cell">1</div>
+        <div id="22" class="cell js-cell"></div>
+        <div id="23" class="cell js-cell"></div>
+        <div id="24" class="cell">4</div>
+        <div id="25" class="cell">7</div>
+        <div id="26" class="cell js-cell"></div>
+      </div>
+
+      <div class="row">
+        <div id="27" class="cell">5</div>
+        <div id="28" class="cell js-cell"></div>
+        <div id="29" class="cell js-cell"></div>
+        <div id="30" class="cell js-cell"></div>
+        <div id="31" class="cell">6</div>
+        <div id="32" class="cell">1</div>
+        <div id="33" class="cell">7</div>
+        <div id="34" class="cell js-cell"></div>
+        <div id="35" class="cell">4</div>
+      </div>
+
+      <div class="row">
+        <div id="36" class="cell">7</div>
+        <div id="37" class="cell">6</div>
+        <div id="38" class="cell">4</div>
+        <div id="39" class="cell">8</div>
+        <div id="40" class="cell">3</div>
+        <div id="41" class="cell js-cell"></div>
+        <div id="42" class="cell js-cell"></div>
+        <div id="43" class="cell js-cell"></div>
+        <div id="44" class="cell js-cell"></div>
+      </div>
+
+      <div class="row">
+        <div id="45" class="cell js-cell"></div>
+        <div id="46" class="cell">3</div>
+        <div id="47" class="cell">2</div>
+        <div id="48" class="cell js-cell"></div>
+        <div id="49" class="cell js-cell"></div>
+        <div id="50" class="cell js-cell"></div>
+        <div id="51" class="cell js-cell"></div>
+        <div id="52" class="cell js-cell"></div>
+        <div id="53" class="cell js-cell"></div>
+      </div>
+
+      <div class="row">
+        <div id="54" class="cell js-cell"></div>
+        <div id="55" class="cell">2</div>
+        <div id="56" class="cell js-cell"></div>
+        <div id="57" class="cell js-cell"></div>
+        <div id="58" class="cell">1</div>
+        <div id="59" class="cell">9</div>
+        <div id="60" class="cell">5</div>
+        <div id="61" class="cell js-cell"></div>
+        <div id="62" class="cell js-cell"></div>
+      </div>
+
+      <div class="row">
+        <div id="63" class="cell js-cell"></div>
+        <div id="64" class="cell js-cell"></div>
+        <div id="65" class="cell">5</div>
+        <div id="66" class="cell js-cell"></div>
+        <div id="67" class="cell js-cell"></div>
+        <div id="68" class="cell js-cell"></div>
+        <div id="69" class="cell">3</div>
+        <div id="70" class="cell js-cell"></div>
+        <div id="71" class="cell">2</div>
+      </div>
+
+      <div class="row">
+        <div id="72" class="cell js-cell"></div>
+        <div id="73" class="cell js-cell"></div>
+        <div id="74" class="cell js-cell"></div>
+        <div id="75" class="cell">4</div>
+        <div id="76" class="cell">5</div>
+        <div id="77" class="cell">2</div>
+        <div id="78" class="cell">1</div>
+        <div id="79" class="cell">9</div>
+        <div id="80" class="cell">7</div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

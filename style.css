@@ -131,4 +131,11 @@ button:hover {
   .sudoku {
     max-width: 100%;
   }
+
+  .puzzle-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }

@@ -27,10 +27,6 @@ function init() {
   timeEl.textContent = "00:00:00";
   timeup = setInterval(timeCountUp, 1000);
   mistakesText();
-
-  // if (scoreLog.lenght === undefined) {
-  //   highScoreBtn.disabled = true;
-  // }
 }
 init();
 
@@ -79,7 +75,6 @@ function saveScoreList(timeMessage) {
 }
 
 function fetchScoreList() {
-  // const highScores = JSON.parse(localStorage.getItem("score"));
 
   if (scoreLog.length !== 0) {
     scoreListEl.textContent = "";
@@ -90,7 +85,6 @@ function fetchScoreList() {
       hrElement.style.marginLeft = "10px"
       scoreListEl.appendChild(list);
       scoreListEl.appendChild(hrElement)
-      // fetchedLog = true;
     });
   } else {
     scoreListEl.textContent = "Empty";
@@ -187,9 +181,6 @@ cells.forEach((cell) => {
 });
 
 highScoreBtn.addEventListener("click", () => {
-  // if (!fetchedLog) {
-  //   fetchScoreList();
-  // }
   fetchScoreList();
 
   const isHidden = getComputedStyle(scoreListEl).display === "none";

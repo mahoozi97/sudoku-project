@@ -10,7 +10,7 @@ let time = {
   hours: 0,
 };
 let timeMessage;
-let scoreLog = [];
+let scoreLog = JSON.parse(localStorage.getItem("score")) || [];
 let timeup;
 let fetchedLog = false;
 
@@ -27,6 +27,10 @@ function init() {
   timeEl.textContent = "00:00:00";
   timeup = setInterval(timeCountUp, 1000);
   mistakesText();
+
+  // if (scoreLog.lenght === undefined) {
+  //   highScoreBtn.disabled = true;
+  // }
 }
 init();
 
@@ -75,14 +79,24 @@ function saveScoreList(timeMessage) {
 }
 
 function fetchScoreList() {
-  const highScores = JSON.parse(localStorage.getItem("score"));
+  // const highScores = JSON.parse(localStorage.getItem("score"));
 
-  highScores.forEach((log) => {
-    let list = document.createElement("li");
-    list.textContent = log;
-    scoreListEl.appendChild(list);
-    fetchedLog = true
-  });
+  if (scoreLog.length !== 0) {
+    scoreListEl.textContent = "";
+    scoreLog.forEach((log) => {
+      let list = document.createElement("p");
+      list.textContent = log;
+      let hrElement = document.createElement("hr")
+      hrElement.style.marginLeft = "10px"
+      scoreListEl.appendChild(list);
+      scoreListEl.appendChild(hrElement)
+      // fetchedLog = true;
+    });
+  } else {
+    scoreListEl.textContent = "Empty";
+    scoreListEl.style.fontSize = "14px";
+    scoreListEl.style.padding = "10px";
+  }
 }
 
 function mistakesText() {
@@ -102,8 +116,8 @@ function showWinMessage() {
 
 function showLoseMessage() {
   if (mistakesCount === 4) {
-    clearInterval(timeup);
     disableButtons();
+    clearInterval(timeup);
     messageEl.textContent = "You Lose!";
     messageEl.style.color = "red";
 
@@ -173,9 +187,14 @@ cells.forEach((cell) => {
 });
 
 highScoreBtn.addEventListener("click", () => {
-  if (!fetchedLog) {
-    fetchScoreList();
-  }
+  // if (!fetchedLog) {
+  //   fetchScoreList();
+  // }
+  fetchScoreList();
+
+  const isHidden = getComputedStyle(scoreListEl).display === "none";
+
+  scoreListEl.style.display = isHidden ? "block" : "none";
 });
 
 restartBtn.addEventListener("click", () => {

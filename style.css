@@ -1,6 +1,57 @@
-#title {
-  margin: 15px auto;
-  width: max-content;
+#game-title {
+  display: flex;
+  gap: 16px;
+}
+
+nav {
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.dropdown {
+  gap: 16px;
+  align-items: center;
+  position: relative;
+}
+
+.score-list {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 88px;
+  max-width: 88px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.restart {
+  display: flex;
+  margin-left: auto;
+}
+
+.score-list p {
+  padding-left: 16px;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav button {
+  background-color: #202a44;
+  border-radius: 8px;
+  padding: 10px 16px;
+  border: 0;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .puzzle-status {
@@ -29,7 +80,7 @@
   cursor: pointer;
 }
 
-button:hover {
+.button-container button:hover {
   background-color: #d0eaff;
 }
 
@@ -84,42 +135,6 @@ button:hover {
   background-color: #d0eaff;
 }
 
-.score-panel {
-  display: flex;
-  justify-content: center;
-  gap: 120px;
-  margin-top: 20px;
-}
-
-.high-score {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* padding: 1rem; */
-}
-
-.score-list {
-  margin-right: 50px;
-}
-
-.restart {
-  width: 80px;
-  font-size: 16px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-.high-score-btn {
-  width: 100px;
-  font-size: 16px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
 .disabled {
   pointer-events: none;
 }
@@ -128,10 +143,6 @@ button:hover {
   display: none;
   visibility: hidden;
 }
-
-/* .message:empty {
-  display: none;
-} */
 
 /* Mobile Devices: 319px — 480px */
 @media (min-width: 319px) and (max-width: 480px) {

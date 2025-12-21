@@ -7,8 +7,19 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <h1 id="title">Sudoku</h1>
+  <body class="body">
+    <nav>
+      <div id="game-title">
+        <h4>Sudoku</h4>
+      </div>
+      <button class="restart hidden">Restart</button>
+      <div class="dropdown">
+        <button class="high-score-btn">High Score</button>
+        <div class="score-list"></div>
+
+      </div>
+    </nav>
+    <!-- <h1 id="title">Sudoku</h1> -->
     <div class="button-container">
       <button id="1b">1</button>
       <button id="2b">2</button>
@@ -140,17 +151,6 @@
         <div id="80" class="cell">7</div>
       </div>
     </div>
-
-    <div class="score-panel">
-      
-      <div class="high-score">
-        <button class="high-score-btn">High Score</button>
-        <ul class="score-list"></ul>
-      </div>
-
-      <button class="restart hidden">Restart</button>
-    </div>
-
     <script type="module" src="app.js"></script>
   </body>
 </html>
